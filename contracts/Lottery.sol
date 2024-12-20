@@ -10,7 +10,7 @@ contract Lottery {
     } 
 
     function enter() public payable {
-        require(msg.value > enterPrice, "not enough money");
+        require(msg.value >= enterPrice, "not enough money");
         players.push(msg.sender);
     }
 
